@@ -1,0 +1,66 @@
+Data source: EFFIS/WILDFIRE Database
+Copyright: © European Union, 1995-2021
+           https://ec.europa.eu/info/legal-notice_en
+File creation date-time: 2021-02-03T12:44:15.790069+01:00
+Data contained: fire
+Data format: ESRI Shapefile / DBF
+Date start: 2010-01-01
+Date end: 2021-02-03
+Selected admin entities:
+
+- PT
+- ES
+------------------------------------------------------------------------------------------
+
+*** MODIS Burnt Areas ***
+
+The Rapid Damage Assessment (RDA) module of EFFIS was initially implemented in 2003 to map burned areas during the fire season,
+by analyzing MODIS daily images at 250 m spatial resolution. For the monitoring of burned areas during the summer,
+daily images from the MODIS instruments on board of TERRA and AQUA satellites are acquired and processed few hours after the acquisition.
+
+The EFFIS Rapid Damage Assessment provides the daily update of the perimeters of burnt areas in Europe 
+ *** for fires of about 30 ha or larger***  twice, every day.
+
+IMPORTANT NOTE - For any use of the EFFIS Burnt Area product the conditions listed below must be taken into consideration:
+ - The product is derived from the daily processing of MODIS satellite imagery at 250 m ground spatial resolution.
+ - The perimeters of the burned scars in the represent areas burned by fires as detected from MODIS satellite imagery. 
+   Therefore, no distinction is made between wildland fires, environmental burnings or prescribed fires.
+ - Burnt scars of approximately 30 hectares in size are mapped, although the product may also include the perimeters
+   of burned areas of smaller dimension.
+ - Small burnt or un-burnt areas below the spatial resolution of the MODIS imagery are not mapped; 
+   these may include small unburned islands inside the burnt area perimeter.
+ - The Burnt Area product is updated up two times every day. 
+   The perimeter of burnt areas due to different fires happening between two sequential updates may be merged into a single perimeter.
+ - The dates reported as Start date and Last update may not correspond to the date of ignition and extinction of the fire
+ - The EFFIS burnt area product is intended to provide estimates of burnt areas at European level. Caution should be taken when comparing this product to other data that may have been produced using different methodologies and scopes.
+ - Although the burnt area perimeters are overlayed on the Google imagery, it must be noted that the original EFFIS product 
+   is produced at 250 m spatial resolution, not at the resolution of the underlying Google images.
+
+Although only a fraction of the total number of fires is mapped, the area burned by fires of this size represents 
+*** about 75% to 80% *** of the total area burned in EU. 
+Modeling historical fire data from the EFFIS European fire database, equations have been set up for the different countries, 
+which allow predicting the total area burned with good accuracy; that is, the total burnt area in a country is obtained as a
+function of the area burned by fires larger than 30 ha.
+
+In order to obtain the statistics of the burnt area by land cover type, the data from the CORINE Land Cover database are used.
+Therefore the mapped burned areas are overlaid to land cover maps, allowing the assessment of damage that is harmonized 
+for all the European Countries.
+
+The burnt area mapping in the RDA is based on the identification of active large fires from the MODIS,
+the expansion of the burnt areas from these initial points on the basis of region-growing algorithms, 
+and the refinement of the final perimeter of the fire through visual interpretation of the images. 
+The process is aided by the systematic collection of fire news from the European media. 
+An alternative to the current methodology is being developed. 
+This method is based on abrupt post-fire vegetation change detected from MODIS daily time series. 
+Once implemented, this method will allow for a better and less user-dependent classification of the burned areas.
+------------------------------------------------------------------------------------------
+
+*** DATA LICENSE ***
+(An updated version of this licence can be found at http://effis.jrc.ec.europa.eu/about-effis/data-license/)
+
+© European Union, 2000-2018
+
+Reuse is authorised, provided the source is acknowledged. The reuse policy of the European Commission 
+is implemented by a Decision of 12 December 2011 (https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:330:0039:0042:EN:PDF).
+
+The Commission is not liable for any consequence stemming from the reuse of this publication.
