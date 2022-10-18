@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
 if (dir.exists("Data/") &
     !(exists("finalVariables") &
       exists("ptgal_BA_spolydf") & exists("Mod_BA_RoI_rl"))) {
-  load("Data/input_4.TrainingTest_ndvi.RData")
+  load("Data/input_4.TrainingTest.RData")
 } else{
   message(
     "Data/ folder not found, the following process will not work unless the previous steps have already been executed"
@@ -23,15 +23,9 @@ if (dir.exists("Data/") &
 ### Classification Reference ###
 ################################
 
-# Create area variable (in km2) in the SPolyDF
-ptgal_BA_spolydf$area <- area(ptgal_BA_spolydf) / 1000000
-
-# select large areas (greater than 2 km2) from the SPolyDF
-ptgal_largeBA_spolydf <- ptgal_BA_spolydf
-
-# extract pixels within the RoI
+# extract BA pixels within the RoI
 ref_raster_rl <-  finalVariables[[1]] %>% setValues(NA)
-ptgal_largeBA_rl <- rasterize(ptgal_largeBA_spolydf, ref_raster_rl)
+ptgal_largeBA_rl <- rasterize(ptgal_BA_spolydf, ref_raster_rl)
 
 # create burned area pixel mask
 ptgal_largeBA_mask <-
@@ -112,19 +106,6 @@ FullDataset.df <- rbind(Burned.df, Unburned.df)
 # fix seed
 set.seed(2022)
 
-# # partitionate data regarding land cover
-# lc = 1
-# lc.df <- FullDataset.df[FullDataset.df$LandCover == lc,]
-# trainIndex <- createDataPartition(lc.df$lclass, p = 0.75, list = F)
-# trainingSet <- lc.df[trainIndex, ]
-# testSet <- lc.df[-trainIndex, ]
-# for (lc in 2:11) {
-#   lc.df <- FullDataset.df[FullDataset.df$LandCover == lc,]
-#   trainIndex <- createDataPartition(lc.df$lclass, p = 0.75, list = F)
-#   trainingSet <- rbind(trainingSet,lc.df[trainIndex, ])
-#   testSet <- rbind(trainingSet,lc.df[-trainIndex, ])
-# }
-
 trainIndex <-
   createDataPartition(FullDataset.df$lclass, p = 0.75, list = F)
 
@@ -204,17 +185,6 @@ best_param <- list(
   eval_metric = "error",
   scale_pos_weight = neg / pos
 )
-# best_param <- list(
-#   booster = "gbtree",
-#   eta = 0.1,
-#   max_depth = 5,
-#   min_child_weight = 5,
-#   subsample = 0.75,
-#   colsample_bytree = 0.75,
-#   objective = "binary:logistic",
-#   eval_metric = "error",
-#   scale_pos_weight = neg / pos
-# )
 
 ## REPEAT
 nrep = 100
@@ -262,9 +232,9 @@ for (seed in 1:nrep) {
                            positive = "1")
   
   pcm <- proc.conf_mat(conf_mat = conf_mat_test,
-                metrics = metrics.test,
-                pcts = pcts.test,
-                conf_mats = conf_mats.test)
+                       metrics = metrics.test,
+                       pcts = pcts.test,
+                       conf_mats = conf_mats.test)
   
   metrics.test <- pcm[[1]]
   pcts.test <- pcm[[2]]
@@ -275,13 +245,13 @@ for (seed in 1:nrep) {
   predict_all <- predict(fire_model, fire$FullDataset_mat)
   predict_all <- ifelse(predict_all > 0.5, 1, 0)
   conf_mat_full <- caret::confusionMatrix(as.factor(predict_all),
-                           as.factor(FullDataset.df$lclass),
-                           positive = "1")
+                                          as.factor(FullDataset.df$lclass),
+                                          positive = "1")
   
   pcm <- proc.conf_mat(conf_mat = conf_mat_full,
-                metrics = metrics.full,
-                pcts = pcts.full,
-                conf_mats = conf_mats.full)
+                       metrics = metrics.full,
+                       pcts = pcts.full,
+                       conf_mats = conf_mats.full)
   metrics.full <- pcm[[1]]
   pcts.full <- pcm[[2]]
   conf_mats.full <- pcm[[3]]
@@ -292,9 +262,9 @@ for (seed in 1:nrep) {
                                            positive = "1")
   
   pcm <- proc.conf_mat(conf_mat = conf_mat_Modis,
-                metrics = metrics.mod,
-                pcts = pcts.mod,
-                conf_mats = conf_mats.mod)
+                       metrics = metrics.mod,
+                       pcts = pcts.mod,
+                       conf_mats = conf_mats.mod)
   
   metrics.mod <- pcm[[1]]
   pcts.mod <- pcm[[2]]

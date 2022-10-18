@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+GADM/
+set_credentials.R
+*.RData

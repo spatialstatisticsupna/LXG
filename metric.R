@@ -1,0 +1,15 @@
+metric<-function(a,b,c,d){
+  dr<-a/(a+b+c+d)
+  oe<-b/(a+b)
+  ce<-c/(a+c)
+  p<-a/(a+c)
+  r<-a/(a+b)
+  dc<-2*a/(2*a+b+c)
+  oa<-(a+d)/(a+b+c+d)
+  TP<-dr
+  FN<-b/(a+b+c+d)
+  FP<-c/(a+b+c+d)
+  TN<-d/(a+b+c+d)
+  return(list(metrics=round(c(dr=dr,oe=oe,ce=ce,p=p,r=r,dc=dc,oa=oa),3),
+              porcentajes=round(c(pTP=TP,pFN=FN,pFP=FP,pTN=TN),3)))
+  }

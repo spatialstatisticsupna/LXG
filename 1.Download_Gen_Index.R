@@ -50,7 +50,7 @@ rtoi.path <- file.path("D:/galicia/rtoi")
 dir.create(rtoi.path,showWarnings = F)
 
 # initialize rtoi
-ptgal <- new_rtoi(name = "ptgal",
+ptgal <- new_rtoi(name = "PPXG",
                   region = ROI,
                   db_path = datb.path,
                   rtoi_path = rtoi.path)
@@ -63,8 +63,8 @@ ptgal <- new_rtoi(name = "ptgal",
 # Search terra and aqua data for Region of Interest
 #####
 
-# Credentials
-set_credentials("rsat.package","UpnaSSG.2021")
+# Credentials (use your own credentials)
+set_credentials("YOUR USERNAME","YOUR PASSWORD")
 
 # Time of Interest (month of study and previous and posterior months)
 time <- as.Date("2017-09-01") + 0:90

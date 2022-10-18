@@ -46,7 +46,7 @@ finalVariables <- addLayer(finalVariables, dist_actFire_rl, landCoverBurnable_rl
 
 # Read SPolyDF of burned areas corresponding to the DoI (october 2017) from the 
 # EFFIS wildfire database
-ptgal_BA_spolydf <- readOGR('./incenESPT') %>%
+ptgal_BA_spolydf <- readOGR('./Data/incenESPT') %>%
   mutate(firedateMonth = as.numeric(format(as.Date(FIREDATE), "%Y%m"))) %>%
   spTransform(crs(finalVariables)) %>%
   raster::intersect(finalVariables[[1]]) %>%
@@ -82,4 +82,4 @@ actFire.intensity <- Z.cov.int.nokm(finalVariables,actFires)
 names(actFire.intensity) <- "aF.int"
 
 # save workspace needed as input for the training phase
-save.image("Data/input_4.TrainingTest_ndvi2009.RData")
+save.image("Data/input_4.TrainingTest.RData")

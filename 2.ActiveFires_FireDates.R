@@ -2,7 +2,7 @@
 datOfInt <- '201710'
 
 # Read rtoi generated in the previous step
-rtoi.path <- file.path("D:/galicia/rtoi/ptgal")
+rtoi.path <- file.path("D:/galicia/rtoi/PPXG/")
 ptgal <- read_rtoi(rtoi.path)
 
 # data available within the rtoi can be listed using
