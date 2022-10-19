@@ -22,7 +22,7 @@ The script [*Main.R*](https://github.com/spatialstatisticsupna/PPXG/blob/main/Ma
 
 [**4.TrainingTest.R**](https://github.com/spatialstatisticsupna/PPXG/blob/main/4.TrainingTest.R) It starts generating the classification reference from the dNBR index and the EFFIS burned areas. Later, it adds the classification reference data to the rasterstack generated in the previous step and it transforms it to the text format requiered for XGBoost. Finally, it selects the best hyperparameter combination using cross validation and provides the results.
 
-[**5.showResults.R**](https://github.com/spatialstatisticsupna/PPXG/blob/main/5.showResults.R)  it shows the confusion matrices and the figures of the article.
+[**5.PlotResults.R**](https://github.com/spatialstatisticsupna/PPXG/blob/main/5.showResults.R) Plots the figures of the article.
 
 ## Alternative workflow
 
