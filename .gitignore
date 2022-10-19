@@ -4,4 +4,6 @@
 .Ruserdata
 GADM/
 set_credentials.R
-*.RData
+acc_metrics_pp.RData
+CleanInput.R
+CleanResults.R

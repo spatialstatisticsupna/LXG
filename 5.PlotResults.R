@@ -1,7 +1,7 @@
 library(xgboost)
 library(raster)
 library(spdplyr)
-load("Data/results_pp_rep.RData")
+load("Data/resultsClean.RData")
 
 seed = 53
 set.seed(seed)
@@ -201,3 +201,4 @@ spplot(zoom_classif[[2]],
          height = 0.2
        )
 )
+
