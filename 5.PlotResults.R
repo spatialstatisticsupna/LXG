@@ -1,7 +1,10 @@
-library(xgboost)
-library(raster)
-library(spdplyr)
-load("Data/resultsClean.RData")
+suppressPackageStartupMessages({
+  library(xgboost)
+  library(raster)
+  library(spdplyr)
+})
+
+load("Data/results.RData")
 
 seed = 53
 set.seed(seed)
@@ -25,7 +28,7 @@ predict_all <- ifelse(predict_all > 0.5, 1, 0)
 # add predictions to the FullDataset DataFrame
 FullDataset.df$pred <- predict_all
 # Start from the reference raster
-ref_raster_rl <- finalVariables[[1]] %>% setValues(NA)
+ref_raster_rl <- Mod_BA_RoI_rl %>% setValues(NA)
 pred_raster_rl <- ref_raster_rl
 names(pred_raster_rl) <- "Prediction"
 # obtain indexes within the raster for pixels with each prediction (1 and 0)
