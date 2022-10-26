@@ -112,7 +112,7 @@ spplot(cl_ref_mcd_raster[[1]],
                 "PPXG prediction vs. MCD64A1 classification")[1],
        col.regions=c(terrain.colors(3)[1],rainbow(12)[c(3,1,8)],"white"),
        at = c(0,0.75,1.5,2.25,3,3.75),
-       scales=list(draw=F),
+       scales=list(draw=T),
        sp.layout=list(scale,l3,l4,l2,rect),#,which=1),
        par.settings = list(fontsize = list(text = 11)),
        colorkey = list(
