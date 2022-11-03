@@ -36,7 +36,7 @@ The `Data/` folder contains the following:
 
 - `input_4.TrainingTest.RData`: This file contains the input data needed for the XGBoost training process. More specifically, the  `rasterStack` of the derived indexes, the `spatialPolygonsDataFrame` of burned areas downloaded from the EFFIS wildfire database, and the MODIS MCD64A1 `raster`.
 
-- `results.RData`: This file contains the R objects needed to show the confusion matrices, the comparative plots and the variable importance graph.
+- `results.RData`: This file contains the R objects needed to show the comparative plots, and the data used for generating the tables.
 
 - The `MCD64A1/` folder contains the MCD64A1 MODIS burned area rasters obtained by transforming the Burn Date layer from the .hdf files downloaded via `rsat` to .tif files.
 
