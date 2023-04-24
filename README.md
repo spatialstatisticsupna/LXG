@@ -1,5 +1,6 @@
 # LXG
-This repository provides the R code to reproduce the computational analysis of the paper: "Refining the identification of burned areas in Iberian peninsula regions with spatial point processes and machine learning" (Militino et al., 2022).
+This repository provides the R code to reproduce the computational analysis of the paper: "Extreme gradient boosting algorithm and
+logistic regression for identication of burned areas" (Militino et al., 2023).
 
 ## Table of contents
 
