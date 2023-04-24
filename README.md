@@ -1,4 +1,4 @@
-# PPXG
+# LXG
 This repository provides the R code to reproduce the computational analysis of the paper: "Refining the identification of burned areas in Iberian peninsula regions with spatial point processes and machine learning" (Militino et al., 2022).
 
 ## Table of contents
