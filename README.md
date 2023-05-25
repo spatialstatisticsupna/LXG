@@ -1,6 +1,5 @@
 # LXG
-This repository provides the R code to reproduce the computational analysis of the paper: "Extreme gradient boosting algorithm and
-logistic regression for identication of burned areas" (Militino et al., 2023).
+This repository provides the R code to reproduce the computational analysis of the paper: "Logistic regression versus machine learning for detecting burned areas in satellite images" (Militino et al., 2023).
 
 ## Table of contents
 
