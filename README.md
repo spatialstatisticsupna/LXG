@@ -1,5 +1,5 @@
 # LXG
-This repository provides the R code to reproduce the computational analysis of the paper: "Logistic regression versus machine learning for detecting burned areas in satellite images" (Militino et al., 2023).
+This repository provides the R code to reproduce the computational analysis of the paper: "Logistic regression versus machine learning for detecting burned areas using satellite images" (Militino et al., 2023).
 
 ## Table of contents
 
