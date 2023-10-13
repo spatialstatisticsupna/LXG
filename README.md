@@ -4,14 +4,13 @@ This repository provides the R code to reproduce the computational analysis of t
 ## Table of contents
 
 - [R code](#R-code)
-- [Alternative workflow](#Alternative-workflow)
-- [Auxiliary data](#Auxiliary-data)
+- [Auxiliary data](#Additional-data)
 
 ## R code
 
 The script [*LXG_terra.R*](https://github.com/spatialstatisticsupna/PPXG/blob/main/LXG_terra.R) contains the implementation of the models described in the paper.
 
-## Additional Data
+## Additional data
 
 The `Data/` folder contains the following:
 
