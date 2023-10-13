@@ -4,7 +4,7 @@ This repository provides the R code to reproduce the computational analysis of t
 ## Table of contents
 
 - [R code](#R-code)
-- [Auxiliary data](#Additional-data)
+- [Additional data](#Additional-data)
 
 ## R code
 
