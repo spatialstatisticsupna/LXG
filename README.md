@@ -19,7 +19,7 @@ The `Data/` folder contains the following:
 - `acc_metrics.RData`: This file comprises R objects that store the accuracy metrics for every simulation conducted.
 
 # Acknowledgements
-This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.13039/501100011033.
+This work has been funded by the project PID 2020-113125RB-I00 of the Spanish Research Agency (MCIN/ AEI/ 10.13039/501100011033) and Ayudas predoctorales UPNA 2022-2023.
 
 ![image](https://github.com/spatialstatisticsupna/LXG/blob/main/micin-aei.jpg)
 
