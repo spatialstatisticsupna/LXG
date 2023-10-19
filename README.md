@@ -17,3 +17,12 @@ The `Data/` folder contains the following:
 - `MODIS_DataSet.tif`: This file contains the `raster` data set used to compare the described models.
 
 - `acc_metrics.RData`: This file comprises R objects that store the accuracy metrics for every simulation conducted.
+
+# Acknowledgements
+This work has been supported by Project PID2020-113125RB-I00/ MCIN/ AEI/ 10.13039/501100011033.
+
+![image](https://github.com/spatialstatisticsupna/LXG/blob/main/micin-aei.jpg)
+
+# References
+
+Militino, A. F., Goyena, H., Pérez-Goya, U. and Ugarte, M.D (2023). Logistic regression versus machine learning for detecting burned areas using satellite images _Environmental and Ecological Statistics_ (Submitted)
