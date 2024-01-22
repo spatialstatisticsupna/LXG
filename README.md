@@ -25,4 +25,5 @@ This work has been funded by the project PID 2020-113125RB-I00 of the Spanish Re
 
 # References
 
-Militino, A. F., Goyena, H., Pérez-Goya, U. and Ugarte, M.D (2023). Logistic regression versus machine learning for detecting burned areas using satellite images _Environmental and Ecological Statistics_ (In press)
+Militino, A. F., Goyena, H., Pérez-Goya, U. and Ugarte, M.D (2024). Logistic regression versus machine learning for detecting burned areas using satellite images _Environmental and Ecological Statistics_, 
+ https://doi.org/10.1007/s10651-023-00590-7.
